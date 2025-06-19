@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza Hut</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+  <header>
+  <div class="logo">DeliciousBites</div>
+  
+
+  <button class="menu-toggle" id="menu-toggle"></button>
+
+  <nav id="navbar">
+    <a href="#menu">Menu</a> 
+    <a href="#deals">Deals</a> 
+    <a href="#location">Locations</a>
+
+
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="cta-buttons">
+    <a href="{{ url_for('logout') }}" class="btn btn-secondary">Log Out</a>
+
+    <a href="{{ url_for('order') }}" class="btn btn-primary">Order Now</a>
+
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+      <h1>Crave the Slice. Love the Bites.</h1>
+      <p>Freshly baked pizzas, delivered hot and fast. Your cravings, covered.</p>
+      <div class="hero-buttons">
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Pizzas Section -->
+<section class="featured">
+  <h2 class="section-title"> why choose DeliciousBites ? </h2>
+  <div class="featured-grid">
+    <div class="pizza-card">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.W9RFknwcGfgpMFJFhQurjgHaEK&pid=Api&P=0&h=180" alt="Pepperoni Pizza">
+      <h3>Fresh Ingredients’s</h3>
+      <p>we use only the freshest Ingredients to prepare our delicious pizzas.</p>
+    </div>
+
+    <div class="pizza-card">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.MxjudFSo6gujXsoaJun4mQHaE7&pid=Api&P=0&h=180" alt="Veggie Supreme">
+      <h3>Fast delivery</h3>
+      <p>Hot and fresh, right to your door in no time!.</p>
+    </div>
+
+    <div class="pizza-card">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.n8w8uafzJiIbM8zpFuWyOQHaEK&pid=Api&P=0&h=180" alt="Meat Feast">
+      <h3>Exclusive Offers</h3>
+      <p>Enjoy greate deals and discount on your favorite pizzas.</p>
+    </div>
+
+    <div class="pizza-card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.edqMGk0gkocKaxE0dhfspwHaEo&pid=Api&P=0&h=180" alt="Meat Feast">
+        <h3>Wide Variety</h3>
+        <p>Choose from a wide variety of pizzas,sides and drink.</p>
+      </div>
+      
+  </div>
+</section>
+
+<!-- Menu Preview Section -->
+<section class="menu-preview" id="menu"></section>
+    <h2 class="section-title">🍽 Explore Our Menu</h2>
+    <div class="menu-categories">
+      <div class="menu-item">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.8UeIFPMYwIErE1ShRYB9QAHaEo&pid=Api&P=0&h=180" alt="Pizza">
+        <h3> peperoni Pizza</h3>
+        <p> A classic favorite tooped with crispy Pepperoni and melty cheese.</p>
+      </div>
+  <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDShY6uWD_jj1ujOCeEb_CTLMYjF6kbJ-1y1MWOTccpjG0XM09VrpCEAhu3L7Yw36-nrQ&usqp=CAU" alt="Drinks">
+        <h3>Crunchy Delight</h3>
+        <p> Golden and crispy French Fries that you can’t resist!</p>
+      </div>
+<div class="pizza-card">
+  <img src="https://orders.popskitchen.in/storage/2024/09/image-358.png" alt="Paneer Tikka">
+  <h3>Spice Up Your Taste</h3>
+  <p>Smoky and spicy Paneer Tikka grilled to perfection.</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://vegecravings.com/wp-content/uploads/2017/03/veg-hakka-noodles-recipe-with-step-by-step-instructions.jpg" alt="Veg Hakka Noodles">
+  <h3>Wok-tastic Flavors</h3>
+  <p>Sizzling Veg Hakka Noodles tossed with exotic veggies.</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__700_0_0_0_auto.jpg" alt="Masala Dosa">
+  <h3>South Indian Classic</h3>
+  <p>Authentic Masala Dosa with crispy texture and spicy potato filling.</p>
+</div>
+      <div class="menu-item">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.AZqGRDHUSm2vdcKVa_3QSwHaEu&pid=Api&P=0&h=180" alt="Sides">
+        <h3>veggie pizza</h3>
+        <p>Fresh vegitable like bell propers,onions,olives,and mushrooms.</p>
+      </div>
+  
+      <div class="menu-item">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.IzsBoG0erJRKfIQAgUe21QHaE8&pid=Api&P=0&h=180" alt="Drinks">
+        <h3>BBQ chicken pizza</h3>
+        <p> Topped with smoky BBQ sauce,grilled chicken,and red onions.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAvzHp5oHjhXgpX1os4lPa-6m8KGidmIGRQg&s" alt="Drinks">
+        <h3>Kabab Pizza</h3>
+        <p> cheese silced kabab meat yogurt sauce.</p>
+      </div>
+      
+
+<div class="pizza-card">
+  <img src="https://t4.ftcdn.net/jpg/10/17/65/75/360_F_1017657553_BFjfgC9jaR5KFxJKfQZxVySUnYZ211bR.jpg" alt="Gulab Jamun">
+  <h3>Sweet Heaven</h3>
+  <p>Soft and juicy Gulab Jamun dipped in rose-scented syrup.</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://etimg.etb2bimg.com/photo/113047605.cms" alt="Cold Coffee">
+  <h3>Chill with Coffee</h3>
+  <p>Refreshing Cold Coffee with a creamy twist to energize your day!</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://png.pngtree.com/png-clipart/20240812/original/pngtree-creamy-mango-milkshake-summer-drink-png-image_15754346.png" alt="Mango Shake">
+  <h3>Mango Magic</h3>
+  <p>Cool, thick Mango Shake – your tropical summer treat!</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_SbiBoFFLQkjipZhcjWM9NZe8Dj4QttSbw&s" alt="Lassi">
+  <h3>Punjabi Lassi</h3>
+  <p>Traditional chilled Lassi for a desi refreshment experience.</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdl4Y9qiYcOnD1a1rrdQIw6spywPifeV3xA&s" alt="Coke">
+  <h3>Classic Coke</h3>
+  <p>Enjoy the fizz! Coke to make every bite better.</p>
+</div>
+
+<div class="pizza-card">
+  <img src="https://t3.ftcdn.net/jpg/02/86/26/86/360_F_286268644_FJxZ9RW8bXWWiaZgKajwnwEZ61ynkfOp.jpg" alt="Sprite">
+  <h3>Lemon-Lime Splash</h3>
+  <p>Sprite – Crisp, clean, and absolutely refreshing!</p>
+</div>
+
+    </div>
+    <a href="#full-menu" class="btn btn-secondary menu-btn">View Full Menu</a>
+  </section>
+  <!-- Limited Time Offer Section -->
+<section class="limited-offer" id="deals" style="background-color: #110f0f; padding: 50px 20px;">
+  <div class="offer-content" style="max-width: 1100px; margin: auto;">
+    <h2 style="text-align: center; color: #e53935; font-size: 32px; margin-bottom: 40px;">🔥 Limited Time Offers</h2>
+
+    <!-- Offer Cards Container -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;">
+
+      <!-- Offer 1 -->
+      <div class="offer-box" style="background: #080808; border-radius: 10px; overflow: hidden; width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.IgCgfVBFcOk_9UTIZ51d-QHaE8&pid=Api&P=0&h=180" alt="Special Pizza Offer" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="offer-content" style="padding: 20px;">
+          <h3>Buy 1 Get 1 Free</h3>
+          <p>Order any large pizza and get another large pizza absolutely free!</p>
+          <p class="small-text" style="font-size: 14px; color: #141313;">Offer valid this week only. Don't miss out!</p>
+          <a href="order.html" class="btn btn-primary" style="display: inline-block; margin-top: 15px; background-color: #fa0f0b; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Offer 2 -->
+      <div class="offer-box" style="background: #050505; border-radius: 10px; overflow: hidden; width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.OZny5F6g0QAQPLsU_4HnEAHaE8&pid=Api&P=0&h=180" alt="Combo Deal" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="offer-content" style="padding: 20px;">
+          <h3>Combo Deal</h3>
+          <p>Get a large pizza, garlic bread, and 2 soft drinks for just $19.99!</p>
+          <p class="small-text" style="font-size: 14px; color: #f7f2f2;">Offer valid this week only. Don't miss out!</p>
+          <a href="order.html" class="btn btn-primary" style="display: inline-block; margin-top: 15px; background-color: #f11410; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="offer-box" style="background: #080808; border-radius: 10px; overflow: hidden; width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.udNBuqTFrGsLORhOF2FgWwHaE8&pid=Api&P=0&h=180" alt="Family Meal" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="offer-content" style="padding: 20px;">
+          <h3>Family Meal</h3>
+          <p>Enjoy a family-sized meal with 2 large pizzas and 4 drinks for $29.99!</p>
+          <p class="small-text" style="font-size: 14px; color: #0a0a0a;">Offer valid this week only. Don't miss out!</p>
+          <a href="order.html" class="btn btn-primary" style="display: inline-block; margin-top: 15px; background-color: #f30e0a; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Order Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <link rel="stylesheet" href="style.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+
+  <!-- Location & Delivery Section -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DeliciousBites Location</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<section class="location-delivery" id="location">
+  <div class="location-container">
+    <h2 class="section-title">📍 Find a DeliciousBites Near You</h2>
+    <p>Enter your ZIP code to check delivery or pickup options near you.</p>
+
+    <form class="location-form" id="zipForm">
+      <input type="text" id="zipInput" placeholder="Enter ZIP code" required />
+      <button type="submit" class="btn btn-primary">Find Location</button>
+    </form>
+
+    <button class="btn btn-secondary use-location" id="useLocationBtn">Use My Current Location</button>
+
+    <p id="locationResult" class="location-result"></p>
+    <div id="map" style="height: 400px; margin-top: 20px;"></div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+
+ <!-- Link your JS file here -->
+</body>
+</html>
+
+  <!-- Customer Reviews Section -->
+<section class="reviews-section">
+    <h2 class="section-title">💬 What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-top">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.9bYp47dJ8vp9nJQ82IRt4QHaE8&pid=Api&P=0&h=180" alt="Customer" />
+          <div>
+            <h4>Emily R.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>"Best pizza in town! Always hot, fresh, and cheesy. Never disappoints."</p>
+      </div>
+  
+      <div class="review-card">
+        <div class="review-top">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.7jXHf6_Z_xRQCEeNhU2xaQHaEK&pid=Api&P=0&h=180" alt="Customer" />
+          <div>
+            <h4>Jason K.</h4>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p>"Love their deals and delivery is super fast. Crust is always crispy!"</p>
+      </div>
+  
+      <div class="review-card">
+        <div class="review-top">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.S_X49Eux-VbvTKgveFP51gHaFM&pid=Api&P=0&h=180" alt="Customer" />
+          <div>
+            <h4>Sarah M.</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>"Our Friday night ritual. Family-sized pizza, great taste, great service."</p>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Us Section -->
+<section class="contact-section" id="contact">
+    <h2 class="section-title">📬 content us</h2>
+    <p>Have a question or, feedback? we'd love to hear from you! fill out the form below and we'll get back to you as soon as possible. </p>
+  
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>DeliciousBites</h3>
+            <p>Hot. Fresh. Delivered with love.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#menu">Menu</a>
+            <a href="#deals">Deals</a>
+            <a href="#locations">Locations</a>
+            <a href="#contact">Contact</a>
+     
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 DeliciousBites. All rights reserved.</p>
+    </div>
+</footer>
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>DeliciousBites</h3>
+            <p>Hot. Fresh. Delivered with love.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#menu">Menu</a>
+            <a href="#deals">Deals</a>
+            <a href="#locations">Locations</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 DeliciousBites. All rights reserved.</p>
+    </div>
+</footer>

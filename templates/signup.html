@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - DeliciousBites</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}" />
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Create Your Account</h2>
+    <form class="login-form" id="signup-form" method="POST" action="/signup">
+      <input type="text" name="username" placeholder="Enter your username" required />
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <input type="password" name="password" placeholder="Create a password" required />
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+      <p class="signup-link">Already have an account? <a href="/login">Login</a></p>
+    </form>
+  </div>
+
+</body>
+</html>

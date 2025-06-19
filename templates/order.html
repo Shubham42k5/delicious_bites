@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Place Your Order - DeliciousBites</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <style>
+    /* 🌑 Dark Theme */
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+    }
+
+    .order-form-section {
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #555;
+      background-color: #2c2c2c;
+      color: #fff;
+    }
+
+    .btn-primary {
+      background-color: #e53935;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    .btn-secondary {
+      background-color: #444;
+      color: #fff;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    /* Modal Styling */
+    #paymentModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+    }
+
+    #paymentModalContent {
+      background: #1e1e1e;
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      color: #fff;
+    }
+
+    #paymentModalContent button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #e53935;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2 style="color: #ff5252; font-weight: bold;">📦 Place Your Order</h2>
+    <a href="index.html" class="btn btn-secondary">⬅ Back to Home</a>
+  </header>
+
+  <section class="order-form-section">
+    <h2 style="color: #ff5252;">🛒 Order Your Pizza</h2>
+
+    <form class="order-form" id="order-form" method="POST" action="/order">
+
+      <label>
+        Select Pizza:
+        <select name="pizza">
+          <option>Pepperoni</option>
+          <option>Veggie</option>
+          <option>BBQ Chicken</option>
+          <option>french fries</option>
+          <option>paneer tikka </option>
+          <option>veg hakka noodels</option>
+          <option>gulab Jamun</option>
+          <option>mango Shake</option>
+          <option>punjabi lassi </option>
+          <option>coke </option>
+          <option>sprite </option>
+          <option>kabab pizza</option>
+          <option>Coffee </option>
+          <option>masala dosha</option>
+        </select>
+      </label>
+
+      <label>
+        Quantity:
+        <input type="number" name="quantity" min="1" value="1" />
+      </label>
+
+      <label>
+        Delivery Address:
+        <textarea name="address" rows="4" required></textarea>
+      </label>
+
+      <label>
+        Phone Number:
+        <input type="tel" name="phone" required />
+      </label>
+
+      <button type="submit" class="btn-primary">Submit Order</button>
+    </form>
+  </section>
+
+  <!-- Payment Method Modal -->
+  <div id="paymentModal">
+    <div id="paymentModalContent">
+      <h2>Select Payment Method</h2>
+      <button onclick="selectPayment('online')">💳 Online Payment</button>
+      <button onclick="selectPayment('cod')">💵 Cash on Delivery</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DeliciousBites. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const orderForm = document.getElementById("order-form");
+
+      orderForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Show Payment Modal
+        document.getElementById("paymentModal").style.display = "block";
+      });
+    });
+
+    function selectPayment(method) {
+      if (method === "online") {
+        alert("Redirecting to online payment gateway... (demo)");
+      } else if (method === "cod") {
+        alert("You selected Cash on Delivery.");
+      }
+
+      // Hide modal and redirect to success page
+      document.getElementById("paymentModal").style.display = "none";
+      window.location.href = "/order_success";
+    }
+  </script>
+
+</body>
+</html>
